@@ -1,5 +1,7 @@
 package com.example.jvm;
 
+import org.springframework.context.annotation.Lazy;
+
 /**
  * @Auther: by
  * @Date: 2021/6/18 17:36
@@ -17,9 +19,14 @@ public class Math {
     }
 
     public static void main(String[] args) {
-        Math math = new Math();
-        math.compute();
-        new Thread().start();
+//
+//        Math math = new Math();
+//        math.compute();
+//        new Thread().start();
+        Integer i1 = 1;  //这种调用底层实际是执行的Integer.valueOf(127)，里面用到了IntegerCache对象池
+        int i2 = 1;
+        System.out.println(i1 == i2);//输出true
+
     }
 
 }

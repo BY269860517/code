@@ -1,15 +1,13 @@
 package com.example.jvm;
 
-import org.openjdk.jol.info.ClassLayout;
-
 /**
  * 计算对象大小
  */
 public class JOLSample {
 
     public static void main(String[] args) {
-        ClassLayout layout = ClassLayout.parseInstance(new Object());
-        System.out.println(layout.toPrintable());
+//        ClassLayout layout = ClassLayout.parseInstance(new Object());
+//        System.out.println(layout.toPrintable());
 
 //        System.out.println();
 //        ClassLayout layout1 = ClassLayout.parseInstance(new int[]{});
