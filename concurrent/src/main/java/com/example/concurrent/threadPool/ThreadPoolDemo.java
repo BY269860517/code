@@ -3,8 +3,13 @@ package com.example.concurrent.threadPool;
 
 import java.util.concurrent.*;
 
+/**
+ * 这三个都是自带的线程池，不推荐使用的，会出现OOM，cpu%的问题,
+ * 一般都是用自定义线程池ThreadPoolExecutor threadPoolExecutor=new ThreadPoolExecutor(
+ */
 public class ThreadPoolDemo {
     public static void main(String[] args) {
+     //   ThreadPoolExecutor threadPoolExecutor=new ThreadPoolExecutor(10,20,0L,TimeUnit.SECONDS,new LinkedBlockingDeque<>(10));
         ExecutorService executorService1 = Executors.newCachedThreadPool();//快 最大线程去干活，可以线程复用，一个线程可能做多个活 SynchronousQueue：同步队列
         ExecutorService executorService2 = Executors.newFixedThreadPool(10);//慢  创建10个线程去干活
         ExecutorService executorService3 = Executors.newSingleThreadExecutor();//最慢 只用一个线程干活
