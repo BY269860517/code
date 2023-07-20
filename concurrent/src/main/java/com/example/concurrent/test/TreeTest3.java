@@ -45,7 +45,7 @@ public class TreeTest3 {
         print(result);
         return result;
     }
-Object
+
 
     public void print(List<List<Integer>> lists) {
         for (List<Integer> list : lists) {

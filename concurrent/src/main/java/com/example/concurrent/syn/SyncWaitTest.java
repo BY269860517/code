@@ -2,6 +2,8 @@ package com.example.concurrent.syn;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * @author  Fox
  */
@@ -16,7 +18,7 @@ public class SyncWaitTest {
             log.debug(Thread.currentThread().getName()+" execute");
             try {
                 //Thread.sleep(5000);
-                lock.wait(5000);
+                lock.wait();
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
