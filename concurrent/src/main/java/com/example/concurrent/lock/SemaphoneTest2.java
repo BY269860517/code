@@ -10,7 +10,7 @@ public class SemaphoneTest2 {
     /**
      * 实现一个同时只能处理5个请求的限流器
      */
-    private static Semaphore semaphore = new Semaphore(5);
+    private static Semaphore semaphore = new Semaphore(2);
 
     /**
      * 定义一个线程池

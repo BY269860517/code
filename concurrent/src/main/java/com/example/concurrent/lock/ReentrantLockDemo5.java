@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Fox
- * 公平锁
+ * 演示公平锁和非公平，有没有强行插入情况
  */
 @Slf4j
 public class ReentrantLockDemo5 {
